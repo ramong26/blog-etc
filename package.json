@@ -1,0 +1,17 @@
+{
+  "name": "blog-etc",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "dev:frontend": "pnpm --filter blog-etc dev",
+    "dev:backend": "pnpm --filter backend start:dev"
+  },
+  "dependencies": {
+    "turbo": "2.9.9"
+  }
+}

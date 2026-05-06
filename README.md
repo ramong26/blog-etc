@@ -1,12 +1,10 @@
 # blog-etc
 
-블로그, 프로젝트, 이력서 등 서비스 개발을 위한 모노레포입니다.
-
+블로그, 프로젝트, 이력서 등 서비스 개발을 위한 터보레포입니다.
 
 ## 저장소 구조
 
 ```text
-.
 ├─ backend/      # NestJS
 ├─ frontend/     # Next.js 16(App Router) 웹 앱
 └─ package/      # 공통 타입/유틸 패키지
@@ -15,8 +13,8 @@
 ## 기술 스택
 
 - Frontend: Next.js 16, React 19, TypeScript, Tailwind CSS v4, ESLint
-- Backend: NestJS 
-- Shared: 공통 타입/유틸 패키지 분리 예정
+- Backend: NestJS
+- package: 공통 타입/유틸 패키지 분리 예정
 
 ## 빠른 시작
 
@@ -45,5 +43,5 @@
 ## 현재 상태
 
 - `frontend`: create-next-app 초기 템플릿 기반 상태
-- `backend`: 
-- `package`: 
+- `backend`:
+- `package`:

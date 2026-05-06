@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@repo/ui": "workspace:*",
     "@tanstack/react-query": "^5.100.6",
     "ky": "^2.0.2",
     "next": "16.2.4",
