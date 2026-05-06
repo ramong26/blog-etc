@@ -5,7 +5,6 @@
 ## 저장소 구조
 
 ```text
-.
 ├─ backend/      # NestJS
 ├─ frontend/     # Next.js 16(App Router) 웹 앱
 └─ package/      # 공통 타입/유틸 패키지
