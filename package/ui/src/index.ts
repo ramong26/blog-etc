@@ -8,7 +8,7 @@ export {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from './breadcrumb';
-export { Button, type buttonVariants } from './button';
+export { Button, buttonVariants } from './button';
 export {
   Card,
   CardAction,
