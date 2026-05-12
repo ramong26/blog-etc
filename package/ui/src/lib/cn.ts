@@ -1,6 +1,14 @@
-import { clsx, type ClassValue } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { type ClassValue, clsx } from 'clsx';
+import { extendTailwindMerge } from 'tailwind-merge';
 
-export function cn(...inputs: ClassValue[]) {
+const twMerge = extendTailwindMerge({
+  extend: {
+    theme: {
+      text: ['11', '12', '13', '14', '15', '16', '18', '20', '24', '28', '32'],
+    },
+  },
+});
+
+export const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs));
-}
+};

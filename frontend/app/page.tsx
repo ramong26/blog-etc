@@ -1,9 +1,11 @@
 import { Button } from '@repo/ui';
+import { Textarea } from '@repo/ui';
 
 export default function Home() {
   return (
     <>
-      <Button className="bg-red-500">Hello World</Button>
+      <Button variant="link">Hello World</Button>
+      <Textarea placeholder="Hello World" />
     </>
   );
 }
