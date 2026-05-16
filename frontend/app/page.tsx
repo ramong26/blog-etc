@@ -1,11 +1,6 @@
-import { Button } from '@repo/ui';
-import { Textarea } from '@repo/ui';
+import Image from 'next/image';
+import React from 'react';
 
-export default function Home() {
-  return (
-    <>
-      <Button variant="link">Hello World</Button>
-      <Textarea placeholder="Hello World" />
-    </>
-  );
+export default function Page() {
+  return <div className="flex bg-red-500 p-4 text-sm">hi</div>;
 }
