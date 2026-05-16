@@ -3,9 +3,38 @@
   "trailingComma": "all",
   "semi": true,
   "tabWidth": 2,
-  "plugins": ["prettier-plugin-tailwindcss"],
 
-  "importOrderCaseSensitive": true,
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
 
-  "tailwindFunctions": ["clsx", "cn", "twmerge", "cva"]
+  "tailwindStylesheet": "./app/globals.css",
+
+  "importOrder": [
+    "^next(.*)$",
+    "^react$",
+    "",
+
+    "^@radix-ui",
+    "",
+
+    "<THIRD_PARTY_MODULES>",
+    "",
+
+    "^@repo",
+    "",
+
+    "^@/app(.*)$",
+    "^@/pages(.*)$",
+    "^@/widgets(.*)$",
+    "^@/features(.*)$",
+    "^@/entities(.*)$",
+    "^@/shared(.*)$",
+    "",
+
+    "^[./]"
+  ],
+
+  "tailwindFunctions": ["clsx", "cn", "twMerge", "cva"]
 }
