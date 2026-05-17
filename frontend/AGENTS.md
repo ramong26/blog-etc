@@ -86,11 +86,11 @@ PR 설명에는 반드시 아래 내용을 포함합니다.
 
 ## 주요 변경 파일
 
-| 파일                               | 설명                   |
-| ---------------------------------- | ---------------------- |
-| `.github/pull_request_template.md` | PR 템플릿 구조 정의    |
-| `README.md`                        | PR 작성 규칙 문서화    |
-| `docs/convention/pr-guide.md`      | 제목 및 설명 예시 추가 |
+| 파일                    | 설명                   |
+| ----------------------- | ---------------------- |
+| `.frontend/AGENTS.md`   | 작업 규칙 문서화       |
+| `frontend/app/page.tsx` | 미사용 import 제거     |
+| `frontend/README.md`    | 프로젝트 문서 업데이트 |
 
 ---
 
