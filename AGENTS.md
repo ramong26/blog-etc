@@ -88,9 +88,9 @@ PR 설명에는 반드시 아래 내용을 포함합니다.
 
 | 파일                    | 설명                   |
 | ----------------------- | ---------------------- |
-| `.frontend/AGENTS.md`   | 작업 규칙 문서화       |
+| `.AGENTS.md`            | 작업 규칙 문서화       |
 | `frontend/app/page.tsx` | 미사용 import 제거     |
-| `frontend/README.md`    | 프로젝트 문서 업데이트 |
+| `backend/README.md`     | 프로젝트 문서 업데이트 |
 
 ---
 
