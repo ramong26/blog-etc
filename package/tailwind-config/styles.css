@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @source '../ui/src/**/*.{ts,tsx}';
 
@@ -35,13 +35,13 @@
 
   --inset-shadow-inline: inset 0 0 0 1px hsla(0, 0%, 100%, 0.8);
 
-  --font-pretendard: 'Pretendard', sans-serif;
-  --font-serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia,
-    serif;
-  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    sans-serif;
-  --font-mono: 'SF Mono', var(--font-jetbrains-mono), Consolas, 'Courier New',
-    monospace;
+  --font-pretendard: "Pretendard", sans-serif;
+  --font-serif:
+    "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-sans:
+    var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono:
+    var(--font-jetbrains-mono), "SF Mono", Consolas, "Courier New", monospace;
 
   --spacing-2xs: var(--space-2xs);
   --spacing-xs: var(--space-xs);
@@ -51,40 +51,40 @@
   --spacing-xl: var(--space-xl);
   --spacing-2xl: var(--space-2xl);
 
-  --text-display: 64px;
+  --text-display: 6.4rem;
   --text-display--line-height: 1;
   --text-display--font-weight: 700;
   --text-display--letter-spacing: -0.04em;
-  --text-hero: 44px;
+  --text-hero: 4.4rem;
   --text-hero--line-height: 1.05;
   --text-hero--font-weight: 700;
   --text-hero--letter-spacing: -0.04em;
-  --text-title: 32px;
+  --text-title: 3.2rem;
   --text-title--line-height: 1.08;
   --text-title--font-weight: 700;
   --text-title--letter-spacing: -0.02em;
-  --text-heading: 24px;
+  --text-heading: 2.4rem;
   --text-heading--line-height: 1.2;
   --text-heading--font-weight: 600;
   --text-heading--letter-spacing: -0.02em;
-  --text-body-lg: 16px;
+  --text-body-lg: 1.6rem;
   --text-body-lg--line-height: 1.6;
   --text-body-lg--font-weight: 400;
-  --text-body: 14px;
+  --text-body: 1.4rem;
   --text-body--line-height: 1.6;
   --text-body--font-weight: 400;
-  --text-small: 12px;
+  --text-small: 1.2rem;
   --text-small--line-height: 1.5;
   --text-small--font-weight: 400;
-  --text-caption: 11px;
+  --text-caption: 1.1rem;
   --text-caption--line-height: 1.4;
   --text-caption--font-weight: 600;
   --text-caption--letter-spacing: 0.08em;
-  --text-micro: 10px;
+  --text-micro: 1rem;
   --text-micro--line-height: 1.4;
   --text-micro--font-weight: 600;
   --text-micro--letter-spacing: 0.08em;
-  --text-mono: 11px;
+  --text-mono: 1.1rem;
   --text-mono--line-height: 1.5;
   --text-mono--font-weight: 400;
 }
@@ -204,18 +204,18 @@
     --soft-purple: #f1ebff;
     --soft-orange: #fff0e5;
 
-    --space-2xs: 4px;
-    --space-xs: 8px;
-    --space-sm: 12px;
-    --space-md: 16px;
-    --space-lg: 24px;
-    --space-xl: 32px;
-    --space-2xl: 48px;
+    --space-2xs: 0.4rem;
+    --space-xs: 0.8rem;
+    --space-sm: 1.2rem;
+    --space-md: 1.6rem;
+    --space-lg: 2.4rem;
+    --space-xl: 3.2rem;
+    --space-2xl: 4.8rem;
 
-    --layout-page-width: 960px;
-    --layout-sidebar-left-width: 150px;
-    --layout-sidebar-right-width: 190px;
-    --layout-content-gap: 24px;
+    --layout-page-width: 96rem;
+    --layout-sidebar-left-width: 15rem;
+    --layout-sidebar-right-width: 19rem;
+    --layout-content-gap: 2.4rem;
 
     --border-thin: 1px solid var(--border-color-default);
     --border-strong: 1px solid var(--border-color-strong);
@@ -289,7 +289,7 @@
   }
 
   button,
-  [role='button'] {
+  [role="button"] {
     cursor: pointer;
   }
 
@@ -460,7 +460,7 @@
 
   &:hover,
   &[data-highlighted],
-  &[data-state='open'] {
+  &[data-state="open"] {
     background-color: rgb(255 255 255 / 0.1);
     color: rgb(255 255 255 / 0.95);
   }
@@ -515,13 +515,13 @@
 }
 
 /** 숫자 입력 필드의 스핀 버튼 제거 */
-input[type='number']::-webkit-outer-spin-button,
-input[type='number']::-webkit-inner-spin-button {
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
