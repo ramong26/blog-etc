@@ -1,5 +1,102 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# AGENTS.md
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+## 응답 규칙
+
+- 기본 응답은 한국어로 작성합니다.
+- 설명은 간결하고 실무적으로 작성합니다.
+
+---
+
+## 커밋 메시지 규칙
+
+- 커밋 메시지는 반드시 한국어로 작성합니다.
+- 반드시 `type(scope): subject` 형식을 사용합니다.
+- scope는 변경된 기능 또는 폴더 기준으로 작성합니다.
+- subject는 짧고 명확하게 작성합니다.
+
+### 커밋 예시
+
+```bash
+feat(button): 버튼 UI 추가
+fix(tooltip): 툴팁 위치 오류 수정
+refactor(api): ky 인스턴스 구조 개선
+docs(readme): PR 작성 규칙 추가
+chore(page): 미사용 import 제거
+```
+
+---
+
+## PR 작성 규칙
+
+- PR 제목은 반드시 아래 형식을 사용합니다.
+
+```bash
+[브랜치명] - 변경 사항 요약
+```
+
+### 제목 예시
+
+```bash
+[feat/button-ui] - 버튼 UI 생성
+[fix/tooltip-position] - 툴팁 위치 오류 수정
+```
+
+---
+
+## PR 설명 규칙
+
+PR 설명에는 반드시 아래 내용을 포함합니다.
+
+- 요약
+- 주요 변경 파일
+- 변경(추가) 이유
+
+### PR 설명 템플릿
+
+```md
+## 요약
+
+1. 변경 사항 요약
+
+---
+
+## 주요 변경 파일
+
+| 파일        | 설명      |
+| ----------- | --------- |
+| `파일 경로` | 변경 내용 |
+
+---
+
+## 변경(추가) 이유
+
+- 변경한 이유
+```
+
+### PR 설명 예시
+
+```md
+## 요약
+
+1. PR 제목 컨벤션 추가
+2. PR 설명 구조 통일
+3. 주요 변경 파일 / 변경 이유 작성 규칙 추가
+
+---
+
+## 주요 변경 파일
+
+| 파일                    | 설명                   |
+| ----------------------- | ---------------------- |
+| `.frontend/AGENTS.md`   | 작업 규칙 문서화       |
+| `frontend/app/page.tsx` | 미사용 import 제거     |
+| `frontend/README.md`    | 프로젝트 문서 업데이트 |
+
+---
+
+## 변경(추가) 이유
+
+- PR 형식을 통일해 리뷰 가독성을 높이기 위함
+- 변경 목적과 영향 범위를 빠르게 파악할 수 있도록 하기 위함
+- 협업 시 리뷰어가 핵심 변경 사항을 쉽게 이해할 수 있도록 하기 위함
+```
