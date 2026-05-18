@@ -8,10 +8,10 @@ export default function HomePage() {
   useEnterRouteLanding();
 
   return (
-    <section className="mx-auto flex h-screen flex-col justify-center">
+    <section className="mx-auto flex h-dvh w-full max-w-240 flex-col justify-center px-6 sm:px-10">
       <h1 className="font-serif text-9xl font-bold">HI.</h1>
 
-      <div className="mt-4 border-l-4 border-soft-red px-6 font-mono text-2xl leading-6">
+      <div className="mt-4 border-l-4 border-soft-red px-6 font-mono text-2xl leading-relaxed">
         안녕하세요, 김수연이라고 합니다.
         <br />제 블로그에서 개발과 관련된 여러 기록들을 남기고 있어요.
       </div>
