@@ -4,7 +4,9 @@ import Link from 'next/link';
 
 import { useEnterRouteLanding } from '../model/useEnterRouteLanding';
 
+
 export function HomePage() {
+
   useEnterRouteLanding();
 
   return (
