@@ -8,7 +8,7 @@ import { RECENT_NOTES } from '../model/recent-note.mock';
 
 export function LeftArchiveLayout() {
   return (
-    <aside className="flex h-screen w-96 shrink-0 flex-col gap-[80px] border-r px-10">
+    <aside className="flex min-h-screen w-96 shrink-0 flex-col gap-[80px] border-r px-10">
       <section className="flex flex-col gap-3">
         <h2 className="border-b-[3px] border-border-strong pb-3 text-3xl font-bold text-text-primary">
           RECENT NOTES
@@ -52,7 +52,7 @@ export function LeftArchiveLayout() {
 
 export function RightArchiveLayout() {
   return (
-    <aside className="flex h-screen w-96 shrink-0 flex-col gap-[80px] border-l px-10">
+    <aside className="flex min-h-screen w-96 shrink-0 flex-col gap-[80px] border-l px-10">
       <section className="flex flex-col gap-3">
         <h2 className="border-b-[3px] border-border-strong pb-3 text-3xl font-bold text-text-primary">
           &lt;&gt; GITHUB ACTIVITY
@@ -64,7 +64,7 @@ export function RightArchiveLayout() {
               $ git log --pretty=oneline
             </p>
 
-            <div className="mt-5 flex cursor-pointer flex-col gap-3">
+            <div className="mt-5 flex flex-col gap-3">
               {GITHUB_LOGS.map((log) => (
                 <Link
                   key={log.hash}
@@ -93,6 +93,8 @@ export function RightArchiveLayout() {
           {ARCHIVE_LINKS.map((link) => (
             <a
               key={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               href={link.href}
               className="border-b border-dotted border-border-default text-2xl text-text-primary transition-colors not-first:py-3 first:pb-3 hover:text-accent-red"
             >
