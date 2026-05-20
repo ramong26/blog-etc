@@ -37,3 +37,5 @@ export { Skeleton } from './skeleton';
 export { Toaster } from './sonner';
 export { Spinner } from './spinner';
 export { Textarea } from './textarea';
+
+export { cn } from './lib/cn';

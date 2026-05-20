@@ -1,4 +1,4 @@
-export default function LandingPage() {
+export function LandingPage() {
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-[96rem] flex-col justify-center px-6 py-20 sm:px-10">
       <p className="mb-4 font-mono text-caption text-accent-red">WELCOME</p>
