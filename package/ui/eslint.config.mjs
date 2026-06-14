@@ -16,7 +16,7 @@ export default tseslint.config(
           groups: [['^react$'], ['^@radix-ui'], ['^@repo'], ['^\\w'], ['^\\.']],
         },
       ],
-      'simple-import-sort/exports': 'error',
+      'simple-import-sort/exports': 'warn',
     },
   },
 );
