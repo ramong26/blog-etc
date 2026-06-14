@@ -5,7 +5,7 @@ import { Slot } from 'radix-ui';
 
 import { cn } from './lib/cn';
 
-function Breadcrumb({ ...props }: React.ComponentProps<'nav'>) {
+function BreadcrumbRoot({ ...props }: React.ComponentProps<'nav'>) {
   return <nav aria-label="breadcrumb" data-slot="breadcrumb" {...props} />;
 }
 
@@ -14,7 +14,7 @@ function BreadcrumbList({ className, ...props }: React.ComponentProps<'ol'>) {
     <ol
       data-slot="breadcrumb-list"
       className={cn(
-        'text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5',
+        'text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm wrap-break-word sm:gap-2.5',
         className,
       )}
       {...props}
@@ -99,12 +99,11 @@ function BreadcrumbEllipsis({
   );
 }
 
-export {
-  Breadcrumb,
-  BreadcrumbEllipsis,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-};
+export const Breadcrumb = Object.assign(BreadcrumbRoot, {
+  List: BreadcrumbList,
+  Item: BreadcrumbItem,
+  Link: BreadcrumbLink,
+  Page: BreadcrumbPage,
+  Separator: BreadcrumbSeparator,
+  Ellipsis: BreadcrumbEllipsis,
+});

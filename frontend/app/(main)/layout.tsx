@@ -11,9 +11,9 @@ export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="flex min-h-screen w-full flex-col">
       <Header />
-      <div className="mx-auto my-[30px] flex gap-10">
+      <div className="my-[30px] flex w-full flex-1 gap-10">
         <LeftArchiveLayout />
-        <main>{children}</main>
+        <main className="flex-1 overflow-hidden">{children}</main>
         <RightArchiveLayout />
       </div>
     </div>
