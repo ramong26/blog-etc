@@ -8,7 +8,7 @@ import { RECENT_NOTES } from '../model/recent-note.mock';
 
 export function LeftArchiveLayout() {
   return (
-    <aside className="flex min-h-screen w-96 shrink-0 flex-col gap-[80px] border-r px-10">
+    <aside className="flex min-h-screen w-96 shrink-0 flex-col gap-12.5 border-r px-10">
       <section className="flex flex-col gap-3">
         <h2 className="border-b-[3px] border-border-strong pb-3 text-3xl font-bold text-text-primary">
           RECENT NOTES
@@ -18,7 +18,7 @@ export function LeftArchiveLayout() {
           <Link
             key={note.id}
             href="/"
-            className="group flex flex-col gap-[8px] border-b border-border-default pb-5"
+            className="group flex flex-col gap-1.25 border-b border-border-default pb-5"
           >
             <h3 className="mt-3 font-serif text-2xl leading-snug font-semibold text-text-primary group-hover:text-accent-blue group-hover:underline group-hover:underline-offset-4">
               {note.title}
@@ -52,13 +52,13 @@ export function LeftArchiveLayout() {
 
 export function RightArchiveLayout() {
   return (
-    <aside className="flex min-h-screen w-96 shrink-0 flex-col gap-[80px] border-l px-10">
+    <aside className="flex min-h-screen w-96 shrink-0 flex-col gap-12.5 border-l px-10">
       <section className="flex flex-col gap-3">
         <h2 className="border-b-[3px] border-border-strong pb-3 text-3xl font-bold text-text-primary">
           &lt;&gt; GITHUB ACTIVITY
         </h2>
 
-        <div className="bg-terminal-background shadow-[10px_10px_0px_theme(colors.accent.red)]">
+        <div className="bg-terminal-background shadow-[10px_10px_0px_var(--color-accent-red)]">
           <div className="bg-terminal-background px-5 py-5 font-mono">
             <p className="font-bold text-terminal-red">
               $ git log --pretty=oneline
