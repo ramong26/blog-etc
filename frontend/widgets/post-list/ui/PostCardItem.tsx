@@ -9,7 +9,7 @@ export function PostCardItem() {
     <>
       {POST_CARD_ITEM_MOCK.map((item) => (
         <Card key={item.id} className="max-w-9xl w-full border-2">
-          <Card.Content className="flex-low relative inset-0 flex gap-6">
+          <Card.Content className="relative inset-0 flex gap-6">
             <Image
               src={item.imageUrl}
               alt={item.title}
