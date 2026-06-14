@@ -4,9 +4,9 @@ import { useMemo } from 'react';
 
 import { cva, type VariantProps } from 'class-variance-authority';
 
-import { Label } from './label';
+import { Label } from './Label';
 import { cn } from './lib/cn';
-import { Separator } from './separator';
+import { Separator } from './Separator';
 
 function FieldSet({ className, ...props }: React.ComponentProps<'fieldset'>) {
   return (
@@ -79,7 +79,7 @@ const fieldVariants = cva(
   },
 );
 
-function Field({
+function FieldRoot({
   className,
   orientation = 'vertical',
   ...props
@@ -235,15 +235,14 @@ function FieldError({
   );
 }
 
-export {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldError,
-  FieldGroup,
-  FieldLabel,
-  FieldLegend,
-  FieldSeparator,
-  FieldSet,
-  FieldTitle,
-};
+export const Field = Object.assign(FieldRoot, {
+  Content: FieldContent,
+  Description: FieldDescription,
+  Error: FieldError,
+  Group: FieldGroup,
+  Label: FieldLabel,
+  Legend: FieldLegend,
+  Separator: FieldSeparator,
+  Set: FieldSet,
+  Title: FieldTitle,
+});

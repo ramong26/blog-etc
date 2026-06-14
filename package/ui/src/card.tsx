@@ -2,12 +2,12 @@ import * as React from 'react';
 
 import { cn } from './lib/cn';
 
-function Card({ className, ...props }: React.ComponentProps<'div'>) {
+function CardRoot({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       data-slot="card"
       className={cn(
-        'bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm',
+        'text-card-foreground flex flex-col gap-6 border bg-transparent py-6 shadow-sm',
         className,
       )}
       {...props}
@@ -81,12 +81,11 @@ function CardFooter({ className, ...props }: React.ComponentProps<'div'>) {
   );
 }
 
-export {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-};
+export const Card = Object.assign(CardRoot, {
+  Action: CardAction,
+  Content: CardContent,
+  Description: CardDescription,
+  Footer: CardFooter,
+  Header: CardHeader,
+  Title: CardTitle,
+});
