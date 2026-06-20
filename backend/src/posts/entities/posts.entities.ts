@@ -1,35 +1,30 @@
-// import { Entity, Column } from 'typeorm';
-// import { Expose } from 'class-transformer';
-// import { MaxLength } from 'class-validator';
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
+import { MaxLength } from 'class-validator';
+import { IsNotEmptyString } from '../../libs/core/validators/is-not-empty-string.decorator';
 
-// @Entity()
-// export class Post {
-//     @Expose()
-//     id: number;
+@Entity('Posts')
+export class Post {
+    @PrimaryGeneratedColumn()
+    id!: number;
 
-//     @Expose()
-//     @Column()
-//     // @IsNotEmptyString() <- lib 폴더에 생성해야 함
-//     @MaxLength(255)
-//     title: string;
+    @Column({ length: 255 })
+    @IsNotEmptyString()
+    @MaxLength(255)
+    title!: string;
 
-//     @Expose()
-//     @Column()
-//     content: string;
+    @Column('text')
+    @IsNotEmptyString()
+    content!: string;
 
-//     @Expose()
-//     @Column()
-//     tags?: string[];
+    @Column('simple-array', { nullable: true })
+    tags?: string[];
 
-//     @Expose()
-//     @Column()
-//     imageUrl?: string;
+    @Column({ nullable: true })
+    imageUrl?: string;
 
-//     @Expose()
-//     @Column()
-//     createdAt: Date;
+    @CreateDateColumn()
+    createdAt!: Date;
 
-//     @Expose()
-//     @Column()
-//     updatedAt: Date;
-// }
+    @UpdateDateColumn()
+    updatedAt!: Date;
+}
