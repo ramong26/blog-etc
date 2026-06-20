@@ -16,7 +16,7 @@ export class Post {
     @IsNotEmptyString()
     content!: string;
 
-    @Column('simple-array', { nullable: true })
+    @Column('text', { array: true, nullable: true })
     tags?: string[];
 
     @Column({ nullable: true })
