@@ -1,13 +1,27 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { Logger } from '@nestjs/common';
+
+const getCorsOrigins = () => {
+    const origins = process.env.CORS_ORIGINS ?? 'http://localhost:3000';
+
+    if (origins.trim() === '*') {
+        return '*';
+    }
+
+    return origins
+        .split(',')
+        .map((origin) => origin.trim())
+        .filter(Boolean);
+};
+
 async function bootstrap() {
     const bootLogger = new Logger('Bootstrap NestJS');
 
     const app = await NestFactory.create(AppModule);
 
     app.enableCors({
-        origin: 'http://localhost:3000',
+        origin: getCorsOrigins(),
     });
 
     await app.listen(process.env.PORT ?? 8000);

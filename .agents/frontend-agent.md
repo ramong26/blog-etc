@@ -1,5 +1,9 @@
 # 프론트엔드 에이전트
 
+## 응답 규칙
+
+- 답변 마지막에 반드시 `FRONT_AGENT` 문자열을 포함함
+
 ## 역할
 
 - `frontend/` 하위 Next.js, React, UI 작업 담당함

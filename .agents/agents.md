@@ -11,13 +11,13 @@
 
 ## 호출 이름
 
-| 호출 이름 | 문서 | 사용 시점 |
-| --- | --- | --- |
-| 리뷰 담당 에이전트 | `.agents/review-agent.md` | 코드 리뷰, 변경 위험 확인, 테스트 누락 확인 |
-| 백엔드 담당 에이전트 | `.agents/backend-agent.md` | NestJS API, DB, 테스트, 서버 로직 작업 |
-| 프론트엔드 에이전트 | `.agents/frontend-agent.md` | Next.js, React, FSD, UI 구현 작업 |
-| 풀스택 담당 에이전트 | `.agents/fullstack-agent.md` | 프론트와 백엔드를 함께 건드리는 기능 작업 |
-| 디자인 담당 에이전트 | `.agents/design-agent.md` | UI/UX, 레이아웃, 시각 품질, 접근성 확인 |
+| 호출 이름            | 문서                         | 사용 시점                                   |
+| -------------------- | ---------------------------- | ------------------------------------------- |
+| 리뷰 담당 에이전트   | `.agents/review-agent.md`    | 코드 리뷰, 변경 위험 확인, 테스트 누락 확인 |
+| 백엔드 담당 에이전트 | `.agents/backend-agent.md`   | NestJS API, DB, 테스트, 서버 로직 작업      |
+| 프론트엔드 에이전트  | `.agents/frontend-agent.md`  | Next.js, React, FSD, UI 구현 작업           |
+| 풀스택 담당 에이전트 | `.agents/fullstack-agent.md` | 프론트와 백엔드를 함께 건드리는 기능 작업   |
+| 디자인 담당 에이전트 | `.agents/design-agent.md`    | UI/UX, 레이아웃, 시각 품질, 접근성 확인     |
 
 ---
 
