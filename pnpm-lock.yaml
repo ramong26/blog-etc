@@ -257,6 +257,9 @@ importers:
         specifier: ^4.1.17
         version: 4.2.4
     devDependencies:
+      '@ianvs/prettier-plugin-sort-imports':
+        specifier: 4.7.1
+        version: 4.7.1(prettier@3.8.3)
       '@types/node':
         specifier: ^20
         version: 20.19.39
@@ -269,9 +272,6 @@ importers:
       eslint:
         specifier: ^9
         version: 9.39.4(jiti@2.7.0)
-      eslint-plugin-simple-import-sort:
-        specifier: ^13.0.0
-        version: 13.0.0(eslint@9.39.4(jiti@2.7.0))
       prettier:
         specifier: ^3.4.2
         version: 3.8.3
@@ -3306,11 +3306,6 @@ packages:
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
-
-  eslint-plugin-simple-import-sort@13.0.0:
-    resolution: {integrity: sha512-McAc+/Nlvcg4byY/CABGH8kqnefWBj8s3JA2okEtz8ixbECQgU46p0HkTUKa4YS7wvgGceimlc34p1nXqbWqtA==}
-    peerDependencies:
-      eslint: '>=5.0.0'
 
   eslint-scope@5.1.1:
     resolution: {integrity: sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==}
@@ -9299,10 +9294,6 @@ snapshots:
       semver: 6.3.1
       string.prototype.matchall: 4.0.12
       string.prototype.repeat: 1.0.0
-
-  eslint-plugin-simple-import-sort@13.0.0(eslint@9.39.4(jiti@2.7.0)):
-    dependencies:
-      eslint: 9.39.4(jiti@2.7.0)
 
   eslint-scope@5.1.1:
     dependencies:
