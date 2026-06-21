@@ -5,6 +5,10 @@ import { Logger } from '@nestjs/common';
 const getCorsOrigins = () => {
     const origins = process.env.CORS_ORIGINS ?? 'http://localhost:3000';
 
+    if (origins.trim() === '*') {
+        return '*';
+    }
+
     return origins
         .split(',')
         .map((origin) => origin.trim())

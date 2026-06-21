@@ -27,9 +27,7 @@ export class DatabaseOptionsFactory implements TypeOrmOptionsFactory {
             type: 'postgres',
             url: databaseUrl,
             synchronize: !isProduction, // TODO: 나중에 false로 변경
-            ssl: {
-                rejectUnauthorized: false,
-            },
+            ssl: isProduction ? { rejectUnauthorized: false } : undefined,
         };
     }
 }
