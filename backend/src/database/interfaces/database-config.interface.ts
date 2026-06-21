@@ -5,4 +5,5 @@ export interface IDatabaseConfig {
     DB_USERNAME: string;
     DB_PASSWORD: string;
     DB_DATABASE: string;
+    DATABASE_URL?: string;
 }

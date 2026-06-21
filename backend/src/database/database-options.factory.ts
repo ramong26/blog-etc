@@ -16,14 +16,20 @@ export class DatabaseOptionsFactory implements TypeOrmOptionsFactory {
     }
 
     createDataSourceOptions(): DataSourceOptions {
+        const databaseUrl = this.configService.get<string>('DATABASE_URL') ?? process.env.DATABASE_URL;
+        const isProduction = process.env.NODE_ENV === 'production';
+
+        if (!databaseUrl) {
+            throw new Error('DATABASE_URL is not defined');
+        }
+
         return {
             type: 'postgres',
-            host: this.configService.get('DB_HOST'),
-            port: Number(this.configService.get('DB_PORT') ?? 5432),
-            username: this.configService.get('DB_USERNAME'),
-            password: this.configService.get('DB_PASSWORD'),
-            database: this.configService.get('DB_DATABASE'),
-            synchronize: process.env.NODE_ENV !== 'production',
+            url: databaseUrl,
+            synchronize: !isProduction, // TODO: 나중에 false로 변경
+            ssl: {
+                rejectUnauthorized: false,
+            },
         };
     }
 }
