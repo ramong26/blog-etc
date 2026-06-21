@@ -15,9 +15,6 @@ interface Post {
 }
 
 // TODO: 테스트용이니 수정 필요
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL ?? 'http://localhost:8000';
-
 export function PostCardItem() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +23,7 @@ export function PostCardItem() {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/posts`);
+        const response = await fetch('/api/posts');
 
         if (!response.ok) {
           throw new Error('게시글을 불러오지 못했습니다.');
