@@ -1,5 +1,8 @@
 # 역할별 에이전트 목록
 
+실제 Codex 커스텀 에이전트 설정은 `.codex/agents/*.toml`에 있음.
+이 문서는 호출 이름과 상세 역할 문서의 대응 관계를 설명하는 프로젝트 인덱스임.
+
 ## 호출 규칙
 
 - 사용자가 아래 이름으로 요청하면 해당 에이전트 지침을 우선 확인함
@@ -11,13 +14,13 @@
 
 ## 호출 이름
 
-| 호출 이름            | 문서                         | 사용 시점                                   |
-| -------------------- | ---------------------------- | ------------------------------------------- |
-| 리뷰 담당 에이전트   | `.agents/review-agent.md`    | 코드 리뷰, 변경 위험 확인, 테스트 누락 확인 |
-| 백엔드 담당 에이전트 | `.agents/backend-agent.md`   | NestJS API, DB, 테스트, 서버 로직 작업      |
-| 프론트엔드 에이전트  | `.agents/frontend-agent.md`  | Next.js, React, FSD, UI 구현 작업           |
-| 풀스택 담당 에이전트 | `.agents/fullstack-agent.md` | 프론트와 백엔드를 함께 건드리는 기능 작업   |
-| 디자인 담당 에이전트 | `.agents/design-agent.md`    | UI/UX, 레이아웃, 시각 품질, 접근성 확인     |
+| 호출 이름            | 에이전트 설정                    | 상세 역할 문서                  | 사용 시점                                   |
+| -------------------- | -------------------------------- | ------------------------------- | ------------------------------------------- |
+| 리뷰 담당 에이전트   | `.codex/agents/reviewer.toml`     | `.agents/review-agent.md`       | 코드 리뷰, 변경 위험 확인, 테스트 누락 확인 |
+| 백엔드 담당 에이전트 | `.codex/agents/backend.toml`      | `.agents/backend-agent.md`      | NestJS API, DB, 테스트, 서버 로직 작업      |
+| 프론트엔드 에이전트  | `.codex/agents/frontend.toml`     | `.agents/frontend-agent.md`     | Next.js, React, FSD, UI 구현 작업           |
+| 풀스택 담당 에이전트 | `.codex/agents/fullstack.toml`    | `.agents/fullstack-agent.md`    | 프론트와 백엔드를 함께 건드리는 기능 작업   |
+| 디자인 담당 에이전트 | `.codex/agents/designer.toml`     | `.agents/design-agent.md`       | UI/UX, 레이아웃, 시각 품질, 접근성 확인     |
 
 ---
 
