@@ -12,6 +12,10 @@ export class Post {
     @MaxLength(255)
     title!: string;
 
+    @Column('text', { nullable: true })
+    @IsNotEmptyString()
+    description?: string;
+
     @Column('text')
     @IsNotEmptyString()
     content!: string;
