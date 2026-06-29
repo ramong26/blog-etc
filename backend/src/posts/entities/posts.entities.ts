@@ -14,6 +14,10 @@ export class Post {
 
     @Column('text')
     @IsNotEmptyString()
+    description!: string;
+
+    @Column('text')
+    @IsNotEmptyString()
     content!: string;
 
     @Column('text', { array: true, nullable: true })

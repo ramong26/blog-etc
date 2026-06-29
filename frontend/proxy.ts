@@ -5,16 +5,15 @@ const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL ??
   'http://localhost:8000';
 
-// TODO: 추후 수정 필요
 export function proxy(request: NextRequest) {
-  const url = request.nextUrl.clone();
-  const apiUrl = new URL(url.pathname.replace(/^\/api/, ''), API_BASE_URL);
+  const { pathname } = request.nextUrl;
 
-  apiUrl.search = url.search;
+  if (pathname.startsWith('/api')) {
+    const apiUrl = new URL(pathname.replace(/^\/api/, ''), API_BASE_URL);
+    apiUrl.search = request.nextUrl.search;
 
-  return NextResponse.rewrite(apiUrl);
+    return NextResponse.rewrite(apiUrl);
+  }
+
+  return NextResponse.next();
 }
-
-export const config = {
-  matcher: '/api/:path*',
-};
