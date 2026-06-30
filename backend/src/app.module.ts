@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PostsModule } from './posts/posts.module';
 import { DatabaseOptionsFactory } from './database/database-options.factory';
+import { HealthModule } from './health/health.module';
 @Module({
     imports: [
         ConfigModule.forRoot({
@@ -13,6 +14,7 @@ import { DatabaseOptionsFactory } from './database/database-options.factory';
             useClass: DatabaseOptionsFactory,
         }),
         PostsModule,
+        HealthModule,
     ],
 })
 export class AppModule {}
