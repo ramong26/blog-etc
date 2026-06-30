@@ -6,7 +6,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query';
 
-function makeQueryClient() {
+const makeQueryClient = () => {
   return new QueryClient({
     defaultOptions: {
       queries: {
@@ -14,7 +14,7 @@ function makeQueryClient() {
       },
     },
   });
-}
+};
 
 let browserQueryClient: QueryClient | undefined;
 
