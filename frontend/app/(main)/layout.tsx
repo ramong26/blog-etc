@@ -6,7 +6,7 @@ import {
 } from '@/widgets/archive-layout';
 import { Header } from '@/widgets/header';
 
-import QueryProvider from '../provider';
+import QueryProvider from '../provider/MainProvider';
 
 interface MainLayoutProps {
   children: React.ReactNode;
