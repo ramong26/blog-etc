@@ -3,6 +3,8 @@ import { Inter, JetBrains_Mono } from 'next/font/google';
 
 import './globals.css';
 
+import RootProvider from './provider/RootProvider';
+
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
@@ -28,7 +30,9 @@ export default function RootLayout({
       lang="ko"
       className={`${inter.variable} ${jetBrainsMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <RootProvider>{children}</RootProvider>
+      </body>
     </html>
   );
 }
